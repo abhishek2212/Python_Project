@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/static/assets/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/assets/css/animate.css" />
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <title>VAPT| Welcome</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">VAPT</span> Web Scanner</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="bg-img">
+        <div class="img-overlay">
+            <!--<img src="images/bg1.jpg" class="img-photo">-->
+        </div>
+    </div>
+    <div class="main-sec main-container">
+        <div class="form-wrapper">
+                <form id="vaptForm" method="POST" action="" >
+                    <input type="hidden" name="flagValues" value="" id="flagValues">
+                        <div class="input-grp">
+                            <input id="userInputField" type="text" name="url" placeholder="Enter Url" value="127.0.0.1">                
+                        </div>
+                        <div class="input-grp">
+                            <select id="scanType" name="scanType">
+                                <option value="nil" selected>--Select scan type--</option>
+                                <option value="grabber">Grabber</option>
+                                <option value="nmap">Nmap</option>
+                                <option value="whois">Whois</option>
+                                <option value="nikto">Nikto</option>
+                            </select>
+                        </div>
+                        
+
+                        <div class="input-grp hidden " id="advanceOptionBtnBox"> 
+                                <button id="advanceOptions" type="button">Show advance options</button>
+                        </div>
+
+                        <div class="advances-option-box hidden">
+                                <div class="input-grp">
+                                        <label for="chkbx1">
+                                            <input onclick="ABCD(this)" type="checkbox" class="checkbox" id="chkbx1" value="-O">
+                                            <span id="f1">-O</span>
+                                        </label>
+                                    </div>
+                                    <div class="input-grp">
+                                        <label for="chkbx2">
+                                            <input onclick="ABCD(this)"  type="checkbox" class="checkbox" id="chkbx2" value="-sS">
+                                            <span id="f2">-sS</span>
+                                        </label>
+                                    </div>
+                                    <div class="input-grp">
+                                        <label for="chkbx3">
+                                            <input onclick="ABCD(this)" type="checkbox" class="checkbox" id="chkbx3"  value="-C">
+                                            <span id="f3">-C</span>
+                                        </label>
+                                    </div>
+                                    <div class="input-grp">
+                                        <label for="chkbx4">
+                                             <input onclick="ABCD(this)" type="checkbox" class="checkbox" id="chkbx4" value="-sC">
+                                            <span id="f4">-sC</span>
+                                        </label>
+                                    </div>
+                                    <div class="input-grp">
+                                        <label for="chkbx5">
+                                             <input onclick="ABCD(this)" type="checkbox" class="checkbox" id="chkbx5" value="-sT">
+                                            <span id="f5">-sT</span>
+                                        </label>
+                                    </div>
+                        </div>
+
+                        <div class="input-grp">
+                            <input type="submit" value="Scan Vulnerability" id="submitBtn">
+                        </div>
+                    </form>
+        </div>
+    </div>
+    <div class="slideshow">
+        <div class="paragr">
+            <p>"This is show how to our VAPT Web Scanner work and how to gathering the informations of targeted system and analyse the  reports to using different-different tools"</p>
+        </div>
+        <div class="slide-image">
+                <img src="/static/images/main.png" alt="main.png" id="slideimage">
+                
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-box">
+                    <h6>Website Security</h6>
+                    <ul>
+                        <li><a href="/about">Cross-site Scripting</a></li>
+                        <li><a href="/about">SQL Injection</a></li>
+                        <li><a href="/about">Reflected XSS</a></li>
+                        <li><a href="/about">CSRF Attacks</a></li>
+                        <li><a href="/about">Directory Traversal</a></li>
+                    </ul>  
+                </div>
+            </div>
+
+
+        <div class="footer-left">
+            <div class="footer-box">
+                <h6>Learn More</h6>
+                <ul>
+                    <li><a href="/about">TLS Security</a></li>
+                    <li><a href="/about">Security MySQL Server</a></li>
+                    <li><a href="/about">WordPress Security</a></li>
+                    <li><a href="/about">WebService Security</a></li>
+                    <li><a href="/about">Prevent SQL Injection</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-box">
+                <h6>Follow Us</h6>
+                <ul>
+                    <li><a href="https://accounts.google.com/ServiceLogin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&osid=1&service=mail&ss=1&ltmpl=default&rm=false&flowName=GlifWebSignIn&flowEntry=AddSession"><i class="fa fa-google-plus"></i>Google+</a></li>
+                    <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i>Twitter</a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i>Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </footer>
+    
+    <script  src="/static/assets/js/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+<script src="/static/assets/js/main.js"></script>
+</body>
+</html>
